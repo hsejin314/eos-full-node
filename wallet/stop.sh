@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 DIR=/home/wallet-dir/wallet
 
     if [ -f $DIR"/wallet.pid" ]; then
