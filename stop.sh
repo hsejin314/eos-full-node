@@ -3,11 +3,11 @@
 #                                                                             ##
 # For EOS main-net                                                            ##
 #                                                                             ##
-# https://github.com/acroeos/                                                 ##
+# https://github.com/acroeos/eos-full-node                                    ##
 #                                                                             ##
 ################################################################################
 
-DIR=/home/user/scrip_DIR
+DIR=/opt/eos-full-node
 
     if [ -f $DIR"/nodeos.pid" ]; then
         pid=$(cat $DIR"/nodeos.pid")
