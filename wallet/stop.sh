@@ -1,16 +1,6 @@
 #!/bin/bash
-#######################################################
-##                                                   ##
-## Script Created by CryptoLions, HKEOS and EOS Rio  ##
-## For EOS Ghostbusters Testnet                      ##
-##                                                   ##
-## https://github.com/CryptoLions                    ##
-## https://github.com/eosrio                         ##
-## https://github.com/HKEOS/Ghostbusters-Testnet     ##
-##                                                   ##
-#######################################################
 
-DIR=/home/sejin/Ghostbusters/wallet
+DIR=/home/wallet-dir/wallet
 
     if [ -f $DIR"/wallet.pid" ]; then
         pid=$(cat $DIR"/wallet.pid")
