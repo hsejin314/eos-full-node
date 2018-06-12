@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-DIR=/home/wallet-dir/wallet
+DIR=/opt/eos-full-node/wallet
 
     if [ -f $DIR"/wallet.pid" ]; then
         pid=$(cat $DIR"/wallet.pid")
