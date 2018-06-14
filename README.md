@@ -1,7 +1,7 @@
-## eos-full node easy-tutorial
+## eos node easy-tutorial
 [한국어] (https://github.com/acroeos/eos-full-node/blob/master/READEME_kr.md)
 
-simple and fast setup guide for running eos-full-node with pre-builded container
+simple and fast setup guide for running eos-node with pre-builded container
 reference : https://github.com/EOSIO/eos/wiki/Local-Environment
 
 # System Requirements
@@ -44,7 +44,7 @@ reference :  https://linuxcontainers.org/ko/lxd/getting-started-cli/
 
 ```console
 git clone https://github.com/acroeos/Googledrive_API ~/eos && cd eos
-python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm /home/cj/eos-fullnode103.tar.gz
+python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm /home/cj/eos-node103.tar.gz
   It will take some time...
 ```
 
@@ -52,12 +52,12 @@ python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm /home/cj/eos-fullnod
 
 ```console
 # import as lxd image
-lxc image import eos-fullnode103.tar.gz --alias eos-fullnode-img
+lxc image import eos-node103.tar.gz --alias eos-node-img
 # lxd launch
-lxc launch eos-fullnode-img eos-fullnode
-lxc start eos-fullnode #(if lxc is stopped)
+lxc launch eos-node-img eos-node
+lxc start eos-node #(if lxc is stopped)
 # access to container
-lxc exec eos-fullnode -- su - eos
+lxc exec eos-node -- su - eos
 ```
 
 # 3. make time in synchronized  
