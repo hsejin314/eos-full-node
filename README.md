@@ -41,18 +41,16 @@ reference :  https://linuxcontainers.org/ko/lxd/getting-started-cli/
 # 1. Download container img file
 
 ```console
-# install curl if you need
-sudo apt install curl
-# dwownload image file
-curl -H "Authorization: Bearer ya29.GlvaBZCoNfik3qBrCtnuAYePRjNTZ63LDISzlihUSL21CdeCkQXYeTf76TX9psr96lu7KVJSuBEjXEfiOSj-j1CN74OsG9SKpZqYX-MmRmLAY9YOWW253VRUmi3l" https://www.googleapis.com/drive/v3/files/17MTgVbFc9pqt65r2MWs5oZH8fVukh_h-?alt=media -o EOS-fullnode_lxd_v1022.tar.gz
-
+git clone https://github.com/acroeos/Googledrive_API ~/eos && cd eos
+python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm /home/cj/eos-fullnode103.tar.gz
+  It will take some time...
 ```
 
 # 2. Launch container 
 
 ```console
 # import as lxd image
-lxc image import EOS-fullnode_lxd_v1022.tar.gz --alias eos-fullnode-img
+lxc image import eos-fullnode103.tar.gz --alias eos-fullnode-img
 # lxd launch
 lxc launch eos-fullnode-img eos-fullnode
 lxc start eos-fullnode #(if lxc is stopped)
