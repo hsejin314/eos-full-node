@@ -75,6 +75,18 @@ sudo ntpq -p
 
 ```console
 cd ~/eos-full-node
-./start.sh --delete-all-blocks --genesis-json genesis.json
 
+./start.sh --delete-all-blocks --genesis-json genesis.json
+You can configure
+tail -f stderr.txt
 ```
+
+# 5. Resync
+
+```console
+
+# Hard resync
+./start.sh --delete-all-blocks --genesis-json genesis.json
+tail -F stderr.txt
+```
+
