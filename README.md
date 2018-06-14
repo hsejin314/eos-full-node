@@ -7,7 +7,7 @@ reference : https://github.com/EOSIO/eos/wiki/Local-Environment
 - 20GB Disk free required
 - Ubuntu 18.04 recommended 
 
-# 1. Install lxd 
+# 0. Install lxd 
 
 ```console
 # Install LXD client
