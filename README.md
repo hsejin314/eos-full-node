@@ -1,5 +1,5 @@
 ## eos-full node easy-tutorial
-simple adn fast setup guide for running eos-full-node with pre-builded container
+simple and fast setup guide for running eos-full-node with pre-builded container
 reference : https://github.com/EOSIO/eos/wiki/Local-Environment
 
 # System Requirements
@@ -10,6 +10,11 @@ reference : https://github.com/EOSIO/eos/wiki/Local-Environment
 # 1. Install lxd 
 
 ```console
+# Install LXD client
+apt install lxd lxd-client
+# Initial configuration 
+sudo lxd init
+# Intitial guide for EOS container
 Would you like to use LXD clustering? (yes/no) [default=no]:
 Do you want to configure a new storage pool? (yes/no) [default=yes]:
 Name of the new storage pool [default=default]: eosstrpool
@@ -36,6 +41,28 @@ reference :  https://linuxcontainers.org/ko/lxd/getting-started-cli/
 # 1. Download container img file
 
 ```console
+# install curl if you need
+sudo apt install curl
+# dwownload image file
+curl -H "Authorization: Bearer ya29.GlvaBZCoNfik3qBrCtnuAYePRjNTZ63LDISzlihUSL21CdeCkQXYeTf76TX9psr96lu7KVJSuBEjXEfiOSj-j1CN74OsG9SKpZqYX-MmRmLAY9YOWW253VRUmi3l" https://www.googleapis.com/drive/v3/files/17MTgVbFc9pqt65r2MWs5oZH8fVukh_h-?alt=media -o EOS-fullnode_lxd_v1022.tar.gz
+
+```
+
+# 2. Launch container 
+
+```console
+# import as lxd image
+lxc image import EOS-fullnode_lxd_v1022.tar.gz --alias eos-fullnode-img
+# lxd launch
+lxc launch eos-fullnode-img eos-fullnode
+lxc start eos-fullnode #(if lxc is stopped)
+# access to container
+lxc exec eos-fullnode -- su - eos
+```
+
+# 3. make time in synchronized  
+
+```console
 sudo timedatectl set-ntp no
 # Check if default timesyncd is off
 timedatectl
@@ -44,6 +71,10 @@ sudo apt-get install ntp
 sudo ntpq -p
 ```
 
-curl -H "Authorization: Bearer ya29.GlvaBZCoNfik3qBrCtnuAYePRjNTZ63LDISzlihUSL21CdeCkQXYeTf76TX9psr96lu7KVJSuBEjXEfiOSj-j1CN74OsG9SKpZqYX-MmRmLAY9YOWW253VRUmi3l" https://www.googleapis.com/drive/v3/files/17MTgVbFc9pqt65r2MWs5oZH8fVukh_h-?alt=media -o file
+# 4. run nodeos
 
+```console
+cd ~/eos-full-node
+./start.sh --delete-all-blocks --genesis-json genesis.json
 
+```
