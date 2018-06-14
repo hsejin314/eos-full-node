@@ -7,7 +7,7 @@ pre-builded 컨테이너 이미지를 통한 간단한 EOS 풀노드 설치방�
 - 20GB Disk free required
 - Ubuntu 18.04 recommended 
 
-# 1. lxd 설치
+# 0. lxd 설치
 
 ```console
 # LXD client 설치
