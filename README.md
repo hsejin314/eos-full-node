@@ -75,7 +75,7 @@ sudo ntpq -p
 cd ~/eos-full-node
 
 ./start.sh --delete-all-blocks --genesis-json genesis.json
-You can configure
+# You can check the logs through..
 tail -f stderr.txt
 ```
 
