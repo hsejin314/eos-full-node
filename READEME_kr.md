@@ -1,4 +1,4 @@
-## eos-full node 간편 설치법
+## eos node 간편 설치법
 pre-builded 컨테이너 이미지를 통한 간단한 EOS 풀노드 설치방법
 참고자료 : https://github.com/EOSIO/eos/wiki/Local-Environment
 
@@ -42,7 +42,7 @@ Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]:
 
 ```console
 git clone https://github.com/acroeos/Googledrive_API ~/eos && cd eos
-python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm ~/eos/eos-fullnode103.tar.gz
+python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm ~/eos/eos-node103.tar.gz
   약 ~5분정도의 시간이 소요되니 기다려주세요...
   '~'에서 경로문제가 발생하면 eos디렉토리까지의 경로를 입력해주세요
 ```
@@ -51,12 +51,12 @@ python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm ~/eos/eos-fullnode10
 
 ```console
 # lxd이미지 파일 추출
-lxc image import eos-fullnode103.tar.gz --alias eos-fullnode-img
+lxc image import eos-node103.tar.gz --alias eos-node-img
 # lxd 시작
-lxc launch eos-fullnode-img eos-fullnode
-lxc start eos-fullnode #(if lxc is stopped)
+lxc launch eos-node-img eos-node
+lxc start eos-node #(if lxc is stopped)
 # 컨데이너 접속 (계정 이름: eos)
-lxc exec eos-fullnode -- su - eos
+lxc exec eos-node -- su - eos
 ```
 
 # 3. 시간동기화 필요 
