@@ -1,4 +1,4 @@
-## eos node easy-tutorial
+# eos node easy-tutorial
 [한국어] (https://github.com/acroeos/eos-full-node/blob/master/READEME_kr.md)
 
 simple and fast setup guide for running eos-node with pre-builded container
