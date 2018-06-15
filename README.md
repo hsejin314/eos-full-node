@@ -4,12 +4,13 @@
 simple and fast setup guide for running eos-node with pre-builded container
 reference : https://github.com/EOSIO/eos/wiki/Local-Environment
 
-# System Requirements
+
+## System Requirements
 - 8GB RAM free required
 - 20GB Disk free required
 - Ubuntu 18.04 recommended 
 
-# 0. Install lxd 
+## 0. Install lxd 
 
 ```console
 # Install LXD client
@@ -40,7 +41,7 @@ Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]:
 reference :  https://linuxcontainers.org/ko/lxd/getting-started-cli/
 
 
-# 1. Download container img file
+## 1. Download container img file
 
 ```console
 git clone https://github.com/acroeos/Googledrive_API ~/eos && cd eos
@@ -48,7 +49,7 @@ python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm /home/cj/eos-node103
   It will take some time...
 ```
 
-# 2. Launch container 
+## 2. Launch container 
 
 ```console
 # import as lxd image
@@ -60,7 +61,7 @@ lxc start eos-node #(if lxc is stopped)
 lxc exec eos-node -- su - eos
 ```
 
-# 3. make time in synchronized  
+## 3. make time in synchronized  
 
 ```console
 sudo timedatectl set-ntp no
@@ -71,7 +72,7 @@ sudo apt-get install ntp
 sudo ntpq -p
 ```
 
-# 4. run nodeos
+## 4. run nodeos
 
 ```console
 cd ~/eos-full-node
@@ -81,7 +82,7 @@ cd ~/eos-full-node
 tail -f stderr.txt
 ```
 
-# 5. Resync
+## 5. Resync
 
 ```console
 
