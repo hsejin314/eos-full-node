@@ -45,7 +45,7 @@ reference :  https://linuxcontainers.org/ko/lxd/getting-started-cli/
 
 ```console
 git clone https://github.com/acroeos/Googledrive_API ~/eos && cd eos
-python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm /home/cj/eos-node103.tar.gz
+python3 google_request.py 18YXnq0doZBRD8-y4UD1TJCMooJrAEWJh /home/eos/eos-node105.tar.gz
   It will take some time...
 ```
 
@@ -53,7 +53,7 @@ python3 google_request.py 1dhWeAGdf1VG_1qrakF2XhoVCCXSNCWzm /home/cj/eos-node103
 
 ```console
 # import as lxd image
-lxc image import eos-node103.tar.gz --alias eos-node-img
+lxc image import eos-node105.tar.gz --alias eos-node-img
 # lxd launch
 lxc launch eos-node-img eos-node
 lxc start eos-node #(if lxc is stopped)
